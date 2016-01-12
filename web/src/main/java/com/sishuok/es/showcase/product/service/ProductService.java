@@ -8,7 +8,7 @@ package com.sishuok.es.showcase.product.service;
 import com.sishuok.es.common.service.BaseService;
 import com.sishuok.es.showcase.product.entity.Product;
 import com.sishuok.es.showcase.product.repository.ProductRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.stereotype.Service;
 
 /**
@@ -18,5 +18,11 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class ProductService extends BaseService<Product, Long> {
-
+	 private ProductRepository getProductRepository() {
+	        return (ProductRepository) baseRepository;
+	    }
+	
+	public Product findByCategoryId(Long categoryId){
+		return getProductRepository().findByCategoryId(categoryId);
+	}
 }

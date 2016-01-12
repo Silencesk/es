@@ -6,15 +6,15 @@
           http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
           http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
 
-    <!-- realm -->
+    <!-- realm --><!-- 域,用户域的认证与授权 -->
     <!--depends-on="userRepository, userLastOnlineRepository, userStatusHistoryRepository, springUtils" -->
     <bean id="userRealm" class="org.apache.shiro.realm.UserRealm">
         <!-- 用切面缓存代理了 此处就不缓存了 -->
-        <property name="authenticationCachingEnabled" value="false"/>
-        <property name="authorizationCachingEnabled" value="false"/>
+        <property name="authenticationCachingEnabled" value="false"/>	<!-- 身份认证 -->
+        <property name="authorizationCachingEnabled" value="false"/>	<!-- 授权 -->
     </bean>
 
-    <!---cookie-->
+    <!---cookie-->s
     <!-- uid(session id) 生成策略 -->
     <bean id="sessionIdGenerator" class="org.apache.shiro.session.mgt.eis.JavaUuidSessionIdGenerator"/>
     <bean id="sessionIdCookie" class="org.apache.shiro.web.servlet.SimpleCookie">

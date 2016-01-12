@@ -63,7 +63,7 @@
             </plugin>
 
 
-
+			<!-- native2ascii-maven-plugin&maven-db-plugin该插件能将pom文件中定义的属性替换成具体内容 -->
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>native2ascii-maven-plugin</artifactId>
@@ -197,8 +197,26 @@
             <artifactId>poi-ooxml</artifactId>
             <version>3.9</version>
         </dependency>
-
-
+        
+		<!-- javax -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+		</dependency>
+		
+		<!-- test -->
+		<dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-all</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+        </dependency>
 
     </dependencies>
 
@@ -231,7 +249,7 @@
                     <![CDATA[jdbc:mysql://localhost:3306/${db.name}?autoReconnect=true&amp;useUnicode=true&amp;characterEncoding=utf-8]]>
                 </connection.url>
                 <connection.username>root</connection.username>
-                <connection.password/>
+                <connection.password>root</connection.password>
                 <jpa.showSql>true</jpa.showSql>
                 <jpa.generateDdl>false</jpa.generateDdl>
                 <jpa.database>MYSQL</jpa.database>
@@ -256,7 +274,7 @@
                     <![CDATA[jdbc:mysql://localhost:3306/${db.name}?autoReconnect=true&amp;useUnicode=true&amp;characterEncoding=utf-8]]>
                 </connection.url>
                 <connection.username>root</connection.username>
-                <connection.password/>
+                <connection.password>root</connection.password>
                 <jpa.showSql>false</jpa.showSql>
                 <jpa.generateDdl>false</jpa.generateDdl>
                 <jpa.database>MYSQL</jpa.database>
@@ -283,7 +301,7 @@
                     <![CDATA[jdbc:mysql://localhost:3306/${db.name}?autoReconnect=true&amp;useUnicode=true&amp;characterEncoding=utf-8]]>
                 </connection.url>
                 <connection.username>root</connection.username>
-                <connection.password/>
+                <connection.password>root</connection.password>
                 <jpa.showSql>false</jpa.showSql>
                 <jpa.generateDdl>false</jpa.generateDdl>
                 <jpa.database>MYSQL</jpa.database>

@@ -134,7 +134,7 @@
 
     <tx:advice id="txAdvice" transaction-manager="transactionManager">
         <tx:attributes>
-            <tx:method name="doReweight" propagation="REQUIRES_NEW"/>
+            <tx:method name="doReweight" propagation="REQUIRES_NEW"/>	<!-- 消息处理都是采用的REQUIRES_NEW事务级别 -->
             <tx:method name="doClear*" propagation="REQUIRES_NEW"/>
             <tx:method name="doSend*" propagation="REQUIRES_NEW"/>
             <tx:method name="doBatchSave*" propagation="REQUIRES_NEW"/>

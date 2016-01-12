@@ -14,8 +14,7 @@ import com.sishuok.es.showcase.product.entity.Product;
  * <p>Version: 1.0
  */
 public interface ProductRepository extends BaseRepository<Product, Long> {
-
-
+	Product findByCategoryId(Long categoryId);
 }
 
 

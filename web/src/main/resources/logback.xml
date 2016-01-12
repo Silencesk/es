@@ -46,13 +46,15 @@
             <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger - %msg%n</pattern>
         </encoder>
     </appender>
-
-    <root level="info"/>
-
-    <!--<logger name="org.apache" level="debug">-->
-        <!--<appender-ref ref="STDOUT"/>-->
-    <!--</logger>-->
-
+    
+    <root level="info">
+    	<!-- <appender-ref ref="STDOUT" /> -->
+    </root>
+    
+    <!-- show parameters for hibernate sql -->
+    <logger name="org.hibernate.type.descriptor.sql.BasicBinder" level="TRACE">
+        <appender-ref ref="STDOUT"/>
+    </logger>
     <!--错误日志-->
     <logger name="es-error" level="info">
         <appender-ref ref="ERROR"/>
@@ -65,7 +67,6 @@
     <logger name="es-sys-user" level="info">
         <appender-ref ref="SYS-USER"/>
     </logger>
-
     <!-- cache -->
     <logger name="com.sishuok.es.extra.aop" level="info">
             <appender-ref ref="STDOUT"/>

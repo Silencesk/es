@@ -32,7 +32,6 @@ public class Product extends BaseEntity<Long> {
     @Column(name = "name")
     private String name;
 
-
     /**
      * 价格 以“角”为单位
      */
