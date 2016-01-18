@@ -244,12 +244,15 @@
                 <connection.driver_class>com.mysql.jdbc.Driver</connection.driver_class>
                 <connection.admin.url>
                     <![CDATA[jdbc:mysql://localhost:3306?autoReconnect=true&amp;useUnicode=true&amp;characterEncoding=utf-8]]>
+                    <!-- <![CDATA[jdbc:mysql://172.17.209.77:3306?autoReconnect=true&amp;useUnicode=true&amp;characterEncoding=utf-8]]> -->
                 </connection.admin.url>
                 <connection.url>
                     <![CDATA[jdbc:mysql://localhost:3306/${db.name}?autoReconnect=true&amp;useUnicode=true&amp;characterEncoding=utf-8]]>
+                    <!-- <![CDATA[jdbc:mysql://172.17.209.77:3306/${db.name}?autoReconnect=true&amp;useUnicode=true&amp;characterEncoding=utf-8]]> -->
                 </connection.url>
                 <connection.username>root</connection.username>
                 <connection.password>root</connection.password>
+                <!-- <connection.password>blf1#root</connection.password> -->
                 <jpa.showSql>true</jpa.showSql>
                 <jpa.generateDdl>false</jpa.generateDdl>
                 <jpa.database>MYSQL</jpa.database>

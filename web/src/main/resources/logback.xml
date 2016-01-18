@@ -55,6 +55,7 @@
     <logger name="org.hibernate.type.descriptor.sql.BasicBinder" level="TRACE">
         <appender-ref ref="STDOUT"/>
     </logger>
+    <logger name="org.springframework.web.servlet.DispatcherServlet" level="DEBUG"/>    <!-- SHOW REQUEST PATH -->
     <!--错误日志-->
     <logger name="es-error" level="info">
         <appender-ref ref="ERROR"/>
