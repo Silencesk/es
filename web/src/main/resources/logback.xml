@@ -48,17 +48,26 @@
     </appender>
     
     <root level="info">
-    	<!-- <appender-ref ref="STDOUT" /> -->
+    	<appender-ref ref="STDOUT" />
     </root>
     
     <!-- show parameters for hibernate sql -->
     <logger name="org.hibernate.type.descriptor.sql.BasicBinder" level="TRACE">
         <appender-ref ref="STDOUT"/>
     </logger>
-    <logger name="org.springframework.web.servlet.DispatcherServlet" level="DEBUG"/>    <!-- SHOW REQUEST PATH -->
+    <!-- SHOW REQUEST PATH -->
+    <logger name="org.springframework.web.servlet.DispatcherServlet" level="DEBUG">
+    	<appender-ref ref="STDOUT"/>
+    </logger>
+    <!-- SHOW  Transaction -->
+    <logger name="org.springframework.orm.jpa.JpaTransactionManager" level="DEBUG">
+    	<appender-ref ref="STDOUT"/>
+    </logger>
+    
     <!--错误日志-->
     <logger name="es-error" level="info">
         <appender-ref ref="ERROR"/>
+        <appender-ref ref="STDOUT" />
     </logger>
     <!--访问日志-->
     <logger name="es-access" level="info">

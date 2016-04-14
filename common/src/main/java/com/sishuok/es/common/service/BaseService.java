@@ -9,12 +9,10 @@ import com.google.common.collect.Lists;
 import com.sishuok.es.common.entity.AbstractEntity;
 import com.sishuok.es.common.entity.search.Searchable;
 import com.sishuok.es.common.repository.BaseRepository;
-import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
-import org.springframework.util.Assert;
 
 import java.io.Serializable;
 import java.util.List;
@@ -28,6 +26,7 @@ import java.util.List;
  * <p>Date: 13-1-12 下午4:43
  * <p>Version: 1.0
  */
+@SuppressWarnings("rawtypes")
 public abstract class BaseService<M extends AbstractEntity, ID extends Serializable> {
 
     protected BaseRepository<M, ID> baseRepository;
